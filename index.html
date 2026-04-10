@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ilham Den Fatah — AI & Automation Developer</title>
+  <title>Ilham Den Fatah — AI Automation Builder & Decision Systems Engineer</title>
+  <meta name="description" content="I build AI-powered systems that deliver live business intelligence to stakeholders. n8n, OpenClaw, LLM APIs (Claude/GPT/Gemini), Streamlit, Python, SQL."/>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>"/>
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,500;0,9..40,700;1,9..40,300&display=swap" rel="stylesheet"/>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -32,7 +34,6 @@
 
     .grid-bg { position: fixed; inset: 0; z-index: 0; pointer-events: none; background-image: linear-gradient(var(--border) 1px, transparent 1px), linear-gradient(90deg, var(--border) 1px, transparent 1px); background-size: 60px 60px; opacity: .3; mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 0%, transparent 100%); }
 
-    /* NAV */
     nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 20px 48px; background: linear-gradient(to bottom, rgba(8,12,16,.95), transparent); backdrop-filter: blur(8px); }
     .nav-logo { font-family: var(--mono); font-size: .78rem; color: var(--accent); letter-spacing: .15em; text-transform: uppercase; }
     .nav-logo span { color: var(--text-dim); }
@@ -50,9 +51,10 @@
     .hero-tag::before { content: ''; width: 32px; height: 1px; background: var(--accent); }
     .hero-name { font-family: var(--sans); font-size: clamp(3rem, 8vw, 7rem); font-weight: 700; line-height: .95; letter-spacing: -.03em; color: var(--white); margin-bottom: 8px; }
     .hero-name .accent-word { display: block; background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-    .hero-role { font-family: var(--mono); font-size: clamp(.8rem, 1.4vw, .95rem); color: var(--text-mid); margin-top: 24px; margin-bottom: 16px; letter-spacing: .04em; }
+    .hero-role { font-family: var(--mono); font-size: clamp(.75rem, 1.3vw, .9rem); color: var(--text-mid); margin-top: 24px; margin-bottom: 16px; letter-spacing: .04em; }
     .hero-role .hl { color: var(--accent3); }
-    .hero-desc { max-width: 520px; font-size: .95rem; font-weight: 300; color: var(--text-mid); line-height: 1.75; margin-bottom: 48px; }
+    .hero-desc { max-width: 560px; font-size: .95rem; font-weight: 300; color: var(--text-mid); line-height: 1.75; margin-bottom: 48px; }
+    .hero-desc strong { color: var(--text); font-weight: 500; }
     .hero-cta { display: flex; gap: 16px; flex-wrap: wrap; }
     .btn { font-family: var(--mono); font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; text-decoration: none; padding: 14px 28px; border-radius: 2px; transition: all .25s; cursor: none; }
     .btn-primary { background: var(--accent); color: var(--bg); border: 1px solid var(--accent); }
@@ -75,7 +77,8 @@
     .section-label::before { content: ''; width: 24px; height: 1px; background: var(--accent); }
     h2 { font-size: clamp(1.6rem, 2.8vw, 2.4rem); font-weight: 700; color: var(--white); line-height: 1.1; letter-spacing: -.025em; margin-bottom: 24px; }
     .about-text p { color: var(--text-mid); line-height: 1.8; margin-bottom: 16px; font-size: .92rem; font-weight: 300; }
-    .about-text .highlight { color: var(--text); border-left: 2px solid var(--accent); padding-left: 16px; margin: 24px 0; font-size: .88rem; line-height: 1.75; font-style: italic; }
+    .about-text strong { color: var(--text); font-weight: 500; }
+    .about-text .highlight { color: var(--text); border-left: 2px solid var(--accent); padding-left: 16px; margin: 24px 0; font-size: .88rem; line-height: 1.75; }
     .services-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
     .service-card { background: var(--bg2); padding: 28px 24px; transition: background .25s; position: relative; overflow: hidden; }
     .service-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--accent), var(--accent2)); transform: scaleX(0); transform-origin: left; transition: transform .3s; }
@@ -88,6 +91,9 @@
     /* STACK */
     #stack { padding: 80px 48px; max-width: 1200px; margin: 0 auto; }
     #stack .section-header { margin-bottom: 40px; }
+    .stack-category { margin-bottom: 28px; }
+    .stack-category-label { font-family: var(--mono); font-size: .62rem; color: var(--accent); letter-spacing: .18em; text-transform: uppercase; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+    .stack-category-label::before { content: ''; width: 12px; height: 1px; background: var(--accent); opacity: .5; }
     .stack-grid { display: flex; flex-wrap: wrap; gap: 10px; }
     .stack-pill { font-family: var(--mono); font-size: .7rem; color: var(--text-mid); border: 1px solid var(--border); padding: 8px 16px; border-radius: 2px; letter-spacing: .07em; transition: all .2s; background: var(--bg2); }
     .stack-pill:hover { border-color: var(--accent); color: var(--accent); background: rgba(0,229,255,.05); }
@@ -106,8 +112,10 @@
     .project-card p { font-size: .84rem; font-weight: 300; color: var(--text-mid); line-height: 1.75; flex: 1; margin-bottom: 24px; }
     .project-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
     .tag { font-family: var(--mono); font-size: .62rem; color: var(--accent3); border: 1px solid rgba(0,255,157,.2); padding: 4px 10px; border-radius: 2px; letter-spacing: .07em; }
-    .project-link { font-family: var(--mono); font-size: .68rem; color: var(--accent); text-decoration: none; letter-spacing: .1em; text-transform: uppercase; display: flex; align-items: center; gap: 8px; transition: gap .2s; margin-top: auto; }
+    .project-links { display: flex; gap: 16px; margin-top: auto; flex-wrap: wrap; }
+    .project-link { font-family: var(--mono); font-size: .68rem; color: var(--accent); text-decoration: none; letter-spacing: .1em; text-transform: uppercase; display: flex; align-items: center; gap: 8px; transition: gap .2s; }
     .project-link:hover { gap: 14px; }
+    .project-link.demo { color: var(--accent3); }
     .project-visual { background: var(--bg3); border: 1px solid var(--border); border-radius: 4px; padding: 28px; font-family: var(--mono); font-size: .7rem; color: var(--text-dim); line-height: 1.85; position: relative; overflow: hidden; }
     .project-visual::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0,229,255,.03), rgba(123,97,255,.03)); }
     .code-line { display: block; }
@@ -142,17 +150,16 @@
     .avail-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent3); animation: blink 2s ease infinite; }
     @keyframes blink { 0%,100%{opacity:1;} 50%{opacity:.2;} }
 
-    /* FOOTER */
     footer { border-top: 1px solid var(--border); padding: 28px 48px; max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; position: relative; z-index: 1; }
     footer p { font-family: var(--mono); font-size: .65rem; color: var(--text-dim); letter-spacing: .08em; }
     footer .footer-accent { color: var(--accent); }
 
-    /* REVEAL — default hidden, JS adds .visible */
     .reveal { opacity: 0; transform: translateY(20px); transition: opacity .65s ease, transform .65s ease; }
     .reveal.visible { opacity: 1; transform: none; }
 
-    /* RESPONSIVE */
     @media (max-width: 768px) {
+      body { cursor: auto; }
+      #cursor, #cursor-ring { display: none; }
       nav { padding: 18px 24px; }
       .nav-links { display: none; }
       #hero { padding: 100px 24px 60px; }
@@ -178,7 +185,6 @@
 <div id="cursor-ring"></div>
 <div class="grid-bg"></div>
 
-<!-- NAV -->
 <nav>
   <div class="nav-logo"><span>//</span> idf.dev</div>
   <div class="nav-links">
@@ -198,10 +204,10 @@
     <span class="accent-word">Den Fatah</span>
   </h1>
   <p class="hero-role">
-    <span class="hl">AI & Automation Developer</span> · Business Data Analyst
+    <span class="hl">AI Automation Builder</span> & Decision Systems Engineer
   </p>
   <p class="hero-desc">
-    I build intelligent automated workflows that eliminate manual bottlenecks and turn raw data into decisions. Based in Indonesia, working with teams globally.
+    I build the <strong>last mile</strong> — where data insights become automated actions delivered to decision-makers via Slack, WhatsApp, or Telegram. Using <strong>n8n, OpenClaw, LLM APIs</strong> (Claude/GPT/Gemini), and <strong>Streamlit</strong>, I create end-to-end systems that deliver live business signals, not static reports.
   </p>
   <div class="hero-cta">
     <a href="#projects" class="btn btn-primary">View My Work</a>
@@ -209,23 +215,23 @@
   </div>
 </section>
 
-<!-- STATS STRIP -->
+<!-- STATS -->
 <div class="stats-strip">
   <div class="stat">
-    <span class="stat-val">40+</span>
-    <span class="stat-label">Businesses Supported</span>
+    <span class="stat-val">4-Agent</span>
+    <span class="stat-label">LLM Chain Architecture</span>
   </div>
   <div class="stat">
     <span class="stat-val">Multi-LLM</span>
-    <span class="stat-label">Gemini · Groq · Anthropic · OpenAI</span>
+    <span class="stat-label">Claude · GPT · Gemini · Groq</span>
   </div>
   <div class="stat">
-    <span class="stat-val">3+</span>
-    <span class="stat-label">Years Ops Leadership</span>
+    <span class="stat-val">30%+</span>
+    <span class="stat-label">Revenue Growth Delivered</span>
   </div>
   <div class="stat">
-    <span class="stat-val">∞</span>
-    <span class="stat-label">Workflows to Build</span>
+    <span class="stat-val">3+ Yrs</span>
+    <span class="stat-label">Operations Leadership</span>
   </div>
 </div>
 
@@ -233,39 +239,39 @@
 <section id="about">
   <div class="about-text reveal">
     <div class="section-label">About</div>
-    <h2>I automate the boring stuff — at scale.</h2>
+    <h2>I build the systems between insight and action.</h2>
     <p>
-      I'm an AI & Automation developer based in Indonesia, specializing in building end-to-end intelligent workflows using Python, LLM APIs, and modern automation tools. My background spans operations leadership, data analytics, and hands-on AI development.
+      Most data analysts stop at dashboards and reports. I build what comes after — the <strong>AI intelligence layer</strong> that interprets data, the <strong>n8n/OpenClaw workflows</strong> that automate delivery, and the <strong>multi-channel routing</strong> that gets the right signal to the right person at the right time.
     </p>
     <p>
-      I founded PT Elang Sentosa Food during COVID, supporting 40+ local food businesses — an experience that sharpened my instinct for turning complex operations into streamlined, scalable systems.
+      Before tech, I spent 3+ years as <strong>Head of Business Operations</strong> managing 8+ business units, driving 30% month-over-month revenue growth through data-driven strategy. I also founded a platform connecting 40+ MSMEs during COVID. That operational experience is why I build systems focused on <strong>decisions and delivery</strong> — not just models and metrics.
     </p>
-    <blockquote class="highlight">
-      "My goal isn't just to automate tasks — it's to build systems that create compounding business value: faster decisions, smarter pipelines, zero-manual reporting."
-    </blockquote>
+    <div class="highlight">
+      The result: your stakeholders get live business signals on their phones every morning — anomalies flagged, root causes diagnosed, actions recommended — before their first coffee.
+    </div>
   </div>
   <div class="reveal" style="transition-delay:.15s">
-    <div class="section-label">What I Do</div>
+    <div class="section-label">What I Build</div>
     <div class="services-grid">
       <div class="service-card">
-        <span class="service-icon">⚙️</span>
-        <h3>Workflow Automation</h3>
-        <p>End-to-end pipelines that connect your tools, eliminate manual tasks, and run 24/7</p>
+        <span class="service-icon">⚡</span>
+        <h3>AI Automation Pipelines</h3>
+        <p>n8n + OpenClaw orchestrated workflows with LLM intelligence layers — cron-triggered, event-driven, zero manual intervention</p>
       </div>
       <div class="service-card">
-        <span class="service-icon">🤖</span>
-        <h3>AI Integration</h3>
-        <p>LLM-powered agents and assistants built into your existing business workflow</p>
+        <span class="service-icon">🧠</span>
+        <h3>Multi-Agent LLM Systems</h3>
+        <p>Chained AI agents that detect, diagnose, recommend, and report — using Claude, GPT, Gemini, and Groq APIs</p>
       </div>
       <div class="service-card">
-        <span class="service-icon">📊</span>
-        <h3>Data Analytics</h3>
-        <p>From raw datasets to executive dashboards — Python, SQL, Tableau</p>
+        <span class="service-icon">📡</span>
+        <h3>Automated Delivery</h3>
+        <p>Multi-channel signal routing to Slack, Email, WhatsApp, Telegram — stakeholders get intelligence, not dashboards</p>
       </div>
       <div class="service-card">
-        <span class="service-icon">🔗</span>
-        <h3>Systems Design</h3>
-        <p>End-to-end architecture for scalable automation + data infrastructure</p>
+        <span class="service-icon">🔬</span>
+        <h3>Decision Intelligence</h3>
+        <p>Statistical anomaly detection, risk scoring, demand forecasting — translated into actionable business signals</p>
       </div>
     </div>
   </div>
@@ -279,27 +285,59 @@
       <h2>Tools I work with</h2>
     </div>
   </div>
-  <div class="stack-grid reveal" style="transition-delay:.1s">
-    <span class="stack-pill core">Python</span>
-    <span class="stack-pill core">n8n</span>
-    <span class="stack-pill core">Gemini API</span>
-    <span class="stack-pill core">Anthropic API</span>
-    <span class="stack-pill core">OpenAI API</span>
-    <span class="stack-pill core">Groq / Llama</span>
-    <span class="stack-pill">Streamlit</span>
-    <span class="stack-pill">Tableau</span>
-    <span class="stack-pill">SQL</span>
-    <span class="stack-pill">Pandas</span>
-    <span class="stack-pill">NumPy</span>
-    <span class="stack-pill">TensorFlow</span>
-    <span class="stack-pill">HuggingFace</span>
-    <span class="stack-pill">OpenClaw</span>
-    <span class="stack-pill">AWS</span>
-    <span class="stack-pill">REST APIs</span>
-    <span class="stack-pill">Webhooks</span>
-    <span class="stack-pill">Git / GitHub</span>
-    <span class="stack-pill">Notion</span>
-    <span class="stack-pill">Airtable</span>
+
+  <div class="stack-category reveal" style="transition-delay:.05s">
+    <div class="stack-category-label">AI & Automation (Primary)</div>
+    <div class="stack-grid">
+      <span class="stack-pill core">n8n</span>
+      <span class="stack-pill core">OpenClaw</span>
+      <span class="stack-pill core">Claude API</span>
+      <span class="stack-pill core">GPT API</span>
+      <span class="stack-pill core">Gemini API</span>
+      <span class="stack-pill core">Groq / Llama 3.3</span>
+      <span class="stack-pill core">LangChain</span>
+      <span class="stack-pill core">RAG</span>
+      <span class="stack-pill">Prompt Engineering</span>
+      <span class="stack-pill">Webhook Integrations</span>
+    </div>
+  </div>
+
+  <div class="stack-category reveal" style="transition-delay:.1s">
+    <div class="stack-category-label">Programming & Frameworks</div>
+    <div class="stack-grid">
+      <span class="stack-pill core">Python</span>
+      <span class="stack-pill core">SQL</span>
+      <span class="stack-pill core">Streamlit</span>
+      <span class="stack-pill core">FastAPI</span>
+      <span class="stack-pill">Pandas</span>
+      <span class="stack-pill">NumPy</span>
+      <span class="stack-pill">Scikit-learn</span>
+      <span class="stack-pill">TensorFlow</span>
+      <span class="stack-pill">NLP / TF-IDF</span>
+    </div>
+  </div>
+
+  <div class="stack-category reveal" style="transition-delay:.15s">
+    <div class="stack-category-label">Infrastructure & Data Engineering</div>
+    <div class="stack-grid">
+      <span class="stack-pill">Docker</span>
+      <span class="stack-pill">Apache Airflow</span>
+      <span class="stack-pill">PostgreSQL</span>
+      <span class="stack-pill">BigQuery</span>
+      <span class="stack-pill">Elasticsearch</span>
+      <span class="stack-pill">AWS (S3, Lambda, Glue, Athena)</span>
+      <span class="stack-pill">Git / GitHub</span>
+      <span class="stack-pill">REST APIs</span>
+    </div>
+  </div>
+
+  <div class="stack-category reveal" style="transition-delay:.2s">
+    <div class="stack-category-label">Visualization</div>
+    <div class="stack-grid">
+      <span class="stack-pill">Tableau</span>
+      <span class="stack-pill">Power BI</span>
+      <span class="stack-pill">Looker Studio</span>
+    </div>
   </div>
 </section>
 
@@ -308,82 +346,128 @@
   <div class="section-header reveal">
     <div>
       <div class="section-label">Selected Work</div>
-      <h2>Projects & case studies</h2>
+      <h2>Projects & systems I've built</h2>
     </div>
   </div>
-  <p class="projects-intro reveal">A selection of projects I've built — real data, real decisions, real automation.</p>
+  <p class="projects-intro reveal">End-to-end AI automation systems — from data pipelines to stakeholder delivery. Every project is deployed, documented, and open source.</p>
 
   <div class="projects-grid reveal" style="transition-delay:.1s">
 
-    <!-- 01 FEATURED -->
+    <!-- 01 FEATURED: Revenue Intelligence Agent -->
     <div class="project-card featured">
       <div>
-        <div class="project-num">01 / FEATURED</div>
-        <h3>Revenue Intelligence Agent</h3>
-        <p>Your executives get live revenue insights, anomaly alerts, and critical trend reports — straight to their phone, anytime, anywhere. No waiting for analyst reports. No marathon review meetings. Just the right numbers, at the right moment, automatically.</p>
+        <div class="project-num">01 / FLAGSHIP</div>
+        <h3>Revenue Intelligence Agent — Multi-Agent AI System</h3>
+        <p>4-agent AI pipeline that monitors e-commerce revenue, detects statistical anomalies (Z-score, IQR), diagnoses root causes via dimensional analysis, generates prioritized action recommendations, and delivers structured reports to Slack + Email every morning — automatically, via n8n cron trigger through FastAPI.</p>
         <div class="project-tags">
-          <span class="tag">Python</span>
-          <span class="tag">LLM Agent</span>
-          <span class="tag">Jupyter</span>
-          <span class="tag">Automation</span>
+          <span class="tag">Groq (Llama 3.3 70B)</span>
+          <span class="tag">n8n</span>
+          <span class="tag">FastAPI</span>
+          <span class="tag">Streamlit</span>
+          <span class="tag">Docker</span>
         </div>
-        <a href="https://github.com/ilhamdenfatah/revenue-intelligence-agent" target="_blank" class="project-link">View on GitHub →</a>
+        <div class="project-links">
+          <a href="https://github.com/ilhamdenfatah/revenue-intelligence-agent" target="_blank" class="project-link">GitHub →</a>
+          <a href="https://revenue-agent.streamlit.app" target="_blank" class="project-link demo">Live Demo →</a>
+        </div>
       </div>
       <div class="project-visual">
-        <span class="code-line"><span class="code-comment"># Revenue Intelligence Output</span></span>
+        <span class="code-line"><span class="code-comment"># 4-Agent Intelligence Chain</span></span>
         <span class="code-line">&nbsp;</span>
-        <span class="code-line"><span class="code-key">period</span>:    <span class="code-str">"Q3 2024"</span></span>
-        <span class="code-line"><span class="code-key">revenue</span>:   <span class="code-val">+18.4%</span> MoM</span>
-        <span class="code-line"><span class="code-key">anomaly</span>:   <span class="code-val">true</span></span>
-        <span class="code-line"><span class="code-key">segment</span>:   <span class="code-str">"Region_West"</span></span>
-        <span class="code-line"><span class="code-key">insight</span>:   <span class="code-str">"Underperforming SKUs"</span></span>
+        <span class="code-line"><span class="code-key">agent_1</span>: <span class="code-str">Signal Detector</span></span>
+        <span class="code-line">  <span class="code-comment">→ 14 raw anomalies → 5 critical</span></span>
+        <span class="code-line"><span class="code-key">agent_2</span>: <span class="code-str">Root Cause Analyzer</span></span>
+        <span class="code-line">  <span class="code-comment">→ cross-refs geography + category</span></span>
+        <span class="code-line"><span class="code-key">agent_3</span>: <span class="code-str">Action Recommender</span></span>
+        <span class="code-line">  <span class="code-comment">→ owner + urgency + impact</span></span>
+        <span class="code-line"><span class="code-key">agent_4</span>: <span class="code-str">Report Generator</span></span>
+        <span class="code-line">  <span class="code-comment">→ Slack + Email + Dashboard</span></span>
         <span class="code-line">&nbsp;</span>
-        <span class="code-line"><span class="code-comment">→ Report auto-generated ✓</span></span>
-        <span class="code-line"><span class="code-comment">→ Anomaly alert dispatched ✓</span></span>
-        <span class="code-line"><span class="code-comment">→ Dashboard updated ✓</span></span>
+        <span class="code-line"><span class="code-val">✓ Full chain: &lt;15 seconds</span></span>
+        <span class="code-line"><span class="code-val">✓ Delivery: n8n → FastAPI → Python</span></span>
       </div>
     </div>
 
-    <!-- 02 -->
+    <!-- 02: Retail Inventory AI -->
     <div class="project-card">
       <div class="project-num">02</div>
-      <h3>Retail Inventory AI</h3>
-      <p>Your ops team gets automated restock alerts, inventory risk flags, and demand forecasts — delivered to their phone before problems hit the shelf. Ask it questions in plain English. It answers. No dashboards to dig through, no meetings to schedule.</p>
+      <h3>AI-Powered Retail Inventory Decision Engine</h3>
+      <p>End-to-end system combining a scoring engine with LLM-driven natural language Q&A (Groq/Llama 3.3) and automated stock risk alerts. Stakeholders ask questions like "which products need restocking?" and get instant, data-grounded answers.</p>
       <div class="project-tags">
-        <span class="tag">Python</span>
         <span class="tag">Streamlit</span>
-        <span class="tag">Groq / Llama</span>
+        <span class="tag">Groq</span>
         <span class="tag">n8n</span>
+        <span class="tag">Pandas</span>
       </div>
-      <a href="https://github.com/ilhamdenfatah/retail-inventory-ai" target="_blank" class="project-link">View on GitHub →</a>
+      <div class="project-links">
+        <a href="https://github.com/ilhamdenfatah/retail-inventory-ai" target="_blank" class="project-link">GitHub →</a>
+        <a href="https://retail-inventory-ai.streamlit.app/" target="_blank" class="project-link demo">Live Demo →</a>
+      </div>
     </div>
 
-    <!-- 03 -->
+    <!-- 03: Meeting AI Automation -->
     <div class="project-card">
       <div class="project-num">03</div>
-      <h3>Personal AI Twin</h3>
-      <p>A professional digital twin — enabling recruiters and collaborators to explore my experience, projects, and thinking style through conversational AI. Ask it anything about me.</p>
+      <h3>AI Meeting Summarization & Action Item Extraction</h3>
+      <p>Automated meeting processing pipeline: Gemini AI extracts summaries and action items with owners/deadlines/priorities, orchestrated via n8n webhook triggers. Zero manual intervention from recording to delivery.</p>
       <div class="project-tags">
+        <span class="tag">Gemini API</span>
+        <span class="tag">n8n</span>
+        <span class="tag">Webhooks</span>
         <span class="tag">Python</span>
-        <span class="tag">LLM</span>
-        <span class="tag">RAG</span>
-        <span class="tag">Agent</span>
       </div>
-      <a href="https://github.com/ilhamdenfatah/personal-ai-twin" target="_blank" class="project-link">View on GitHub →</a>
+      <div class="project-links">
+        <a href="https://github.com/ilhamdenfatah/meeting-ai-automation" target="_blank" class="project-link">GitHub →</a>
+      </div>
     </div>
 
-    <!-- 04 -->
+    <!-- 04: Personal AI Twin -->
     <div class="project-card">
       <div class="project-num">04</div>
-      <h3>Retail Demand Forecasting & Decision System</h3>
-      <p>End-to-end demand forecasting evolved into a full decision support system — covering inventory replenishment, safety stock, service level analysis, and scenario simulation using large-scale retail data.</p>
+      <h3>Professional AI Digital Twin</h3>
+      <p>Conversational AI assistant using RAG architecture that lets recruiters and collaborators explore my professional experience through natural language dialogue. Built with Gemini, Streamlit, and structured knowledge engineering.</p>
+      <div class="project-tags">
+        <span class="tag">RAG</span>
+        <span class="tag">Gemini API</span>
+        <span class="tag">Streamlit</span>
+        <span class="tag">LangChain</span>
+      </div>
+      <div class="project-links">
+        <a href="https://github.com/ilhamdenfatah/personal-ai-twin" target="_blank" class="project-link">GitHub →</a>
+        <a href="https://ilham-ai-twin.streamlit.app/" target="_blank" class="project-link demo">Live Demo →</a>
+      </div>
+    </div>
+
+    <!-- 05: Retail Demand Forecasting -->
+    <div class="project-card">
+      <div class="project-num">05</div>
+      <h3>Retail Demand Forecasting & Decision Support</h3>
+      <p>End-to-end forecasting system at the store-department-time level. Forecasts reframed as operational decision signals with priority rankings and actionable recommendations for inventory planning.</p>
       <div class="project-tags">
         <span class="tag">Python</span>
-        <span class="tag">Forecasting</span>
-        <span class="tag">Jupyter</span>
+        <span class="tag">Scikit-learn</span>
+        <span class="tag">Tableau</span>
         <span class="tag">Decision System</span>
       </div>
-      <a href="https://github.com/ilhamdenfatah/retail-demand-forecasting-decision-system" target="_blank" class="project-link">View on GitHub →</a>
+      <div class="project-links">
+        <a href="https://github.com/ilhamdenfatah/retail-demand-forecasting-decision-system" target="_blank" class="project-link">GitHub →</a>
+      </div>
+    </div>
+
+    <!-- 06: Risk Prioritization -->
+    <div class="project-card">
+      <div class="project-num">06</div>
+      <h3>Retail Demand Risk Prioritization System</h3>
+      <p>Decision support system translating fragmented operational signals into interpretable risk scores. Decision-first approach: no black-box models, outputs are auditable and designed for planning conversations.</p>
+      <div class="project-tags">
+        <span class="tag">Python</span>
+        <span class="tag">Pandas</span>
+        <span class="tag">Risk Scoring</span>
+        <span class="tag">Analytics</span>
+      </div>
+      <div class="project-links">
+        <a href="https://github.com/ilhamdenfatah/retail-demand-risk-prioritization" target="_blank" class="project-link">GitHub →</a>
+      </div>
     </div>
 
   </div>
@@ -395,8 +479,8 @@
     <div class="github-banner-left">
       <span class="github-icon">🐙</span>
       <div>
-        <h3>More projects on GitHub</h3>
-        <p>CLV modeling, coffee recommendation systems, risk prioritization, and more open-source work — all public and ready to explore.</p>
+        <h3>More on GitHub</h3>
+        <p>CLV modeling, sentiment analysis, coffee recommendation systems, retail data pipelines, and more — all public and open source.</p>
       </div>
     </div>
     <a href="https://github.com/ilhamdenfatah" target="_blank" class="btn-github">View All Repos →</a>
@@ -412,7 +496,7 @@
       <div class="avail-dot"></div>
       Available for remote work — freelance & full-time
     </div>
-    <p>Looking for an AI/Automation developer who understands both the technical side and the business impact? Let's talk.</p>
+    <p>Looking for an AI automation builder who understands both the engineering and the business impact? I build systems that deliver live intelligence to stakeholders — not just dashboards that nobody checks.</p>
   </div>
   <div class="contact-links reveal" style="transition-delay:.15s">
     <a href="mailto:denfatahilham@gmail.com" class="contact-link">
@@ -420,7 +504,7 @@
       <span class="contact-link-label">denfatahilham@gmail.com</span>
       <span class="contact-link-arrow">→</span>
     </a>
-    <a href="linkedin.com/in/ilham-den-fatah/" class="contact-link" target="_blank">
+    <a href="https://linkedin.com/in/ilham-den-fatah" class="contact-link" target="_blank">
       <span class="contact-link-icon">💼</span>
       <span class="contact-link-label">linkedin.com/in/ilham-den-fatah</span>
       <span class="contact-link-arrow">→</span>
@@ -438,14 +522,12 @@
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <p>© 2026 <span class="footer-accent">Ilham Den Fatah</span>. Built with care.</p>
   <p>Indonesia · <span class="footer-accent">Open to Remote</span></p>
 </footer>
 
 <script>
-  // Custom cursor
   const cursor = document.getElementById('cursor');
   const ring = document.getElementById('cursor-ring');
   let mx=0, my=0, rx=0, ry=0;
@@ -460,7 +542,6 @@
     requestAnimationFrame(animRing);
   })();
 
-  // Scroll reveal — threshold 0 so triggers as soon as 1px enters viewport
   const reveals = document.querySelectorAll('.reveal');
   const obs = new IntersectionObserver(entries => {
     entries.forEach(e => {
@@ -471,8 +552,6 @@
     });
   }, { threshold: 0, rootMargin: '0px 0px -30px 0px' });
   reveals.forEach(r => obs.observe(r));
-
-  // Also immediately show anything already in viewport on page load
   window.addEventListener('load', () => {
     reveals.forEach(r => {
       const rect = r.getBoundingClientRect();
